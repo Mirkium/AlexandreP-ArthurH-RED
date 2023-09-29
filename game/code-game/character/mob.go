@@ -1,5 +1,7 @@
 package sao
 
+import "fmt"
+
 type Mob1 struct {
 	nom                string
 	classe             string
@@ -24,6 +26,11 @@ func InitMob1() {
 	mob1.pointsDeVieActuels = 50
 	mob1.inventaire = map[string]int{"épée fragile": 1, "casque": 1}
 	mob1.degats = 10
+	for i:= 0; i<4; i++ {
+		fmt.Println("Un autre ", mob1.nom)
+		PVE_1()
+	}
+	InitMob8()
 }
 
 type Mob2 struct {
@@ -44,6 +51,7 @@ func InitMob8() {
 	mob2.pointsDeVieActuels = 75
 	mob2.inventaire = map[string]int{"épée en pierre": 1, "casque": 1, "bouclier": 1}
 	mob2.degats = 20
+	PVE_2()
 }
 
 type Mob3 struct {
@@ -64,6 +72,7 @@ func InitMob3() {
 	mob3.pointsDeVieActuels = 100
 	mob3.inventaire = map[string]int{"Lance": 1, "casque": 1, "bouclier": 1}
 	mob3.degats = 30
+	PVE_3()
 }
 
 type Mob4 struct {
